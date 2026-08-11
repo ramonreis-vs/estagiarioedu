@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  /* Estilos para Folha de Prova / Exercícios */
+  .prose-sheet {
+    @apply text-slate-800 leading-relaxed max-w-none;
+  }
+
+  /* Espaçamento entre questões (geralmente h3 ou li de primeiro nível) */
+  .prose-sheet h1, .prose-sheet h2, .prose-sheet h3 {
+    @apply mt-8 sm:mt-12 mb-4 sm:mb-6 font-bold text-slate-900;
+  }
+
+  .prose-sheet ol > li {
+    @apply mb-8 sm:mb-12 pl-2;
+  }
+
+  /* Forçar alternativas de múltipla escolha a ficarem em lista vertical com espaço */
+  .prose-sheet ul {
+    @apply list-none pl-0 mt-4 space-y-3;
+  }
+
+  .prose-sheet ul li {
+    @apply flex items-start gap-2;
+  }
+
+  /* Cabeçalho de prova especial */
+  .exam-header {
+    @apply border-2 border-slate-200 p-6 rounded-none mb-10 font-sans;
+  }
+
+  .exam-header p {
+    @apply border-b border-slate-100 py-2 my-0 text-sm;
+  }
+
+  /* Tabelas de planejamento */
+  .prose table {
+    @apply border-collapse w-full my-8 text-xs;
+  }
+
+  .prose table th {
+    @apply bg-slate-100 border border-slate-200 p-3 font-bold text-slate-700 text-left uppercase tracking-wider;
+  }
+
+  .prose table td {
+    @apply border border-slate-200 p-4 align-top;
+  }
+
+  /* Estilos para Blocos de Redação */
+  .essay-correction h3 {
+    @apply mt-8 mb-4 p-4 bg-slate-50 border-l-4 border-indigo-600 font-display font-bold text-indigo-900 rounded-r-xl;
+  }
+  
+  .essay-correction p, .essay-correction blockquote {
+    @apply px-4 mb-6;
+  }
+
+  .essay-correction blockquote {
+    @apply border-l-2 border-slate-200 italic text-slate-500 bg-slate-50/50 py-4;
+  }
+
+  /* Estilos Pro Max */
+  .promax-output h3 {
+    @apply mt-10 mb-2 p-5 bg-indigo-600 text-white font-display font-black text-lg rounded-2xl shadow-lg shadow-indigo-100 flex items-center gap-3;
+  }
+
+  .promax-output hr {
+    @apply my-16 border-t-2 border-dashed border-slate-100;
+  }
+
+  .promax-output ul {
+    @apply space-y-4 my-6;
+  }
+
+  .promax-output ul li {
+    @apply flex items-center gap-3 text-slate-700 font-medium;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+}

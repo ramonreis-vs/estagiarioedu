@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Estagiário 2.0",
+  "description": "Assistente pedagógico inteligente para geração de planos de aula estruturados baseados na BNCC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
