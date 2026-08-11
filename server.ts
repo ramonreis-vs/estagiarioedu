@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
-import apiRouter from './api/index';
+import apiRouter from './api/index.js';
 
 async function startServer() {
   const app = express();
