@@ -165,10 +165,9 @@ export default function App() {
         if (parsed.form) setForm(parsed.form);
         if (parsed.selectedAction) {
           setSelectedAction(parsed.selectedAction);
-          if (parsed.currentStep) setCurrentStep(parsed.currentStep);
-        } else {
-          setCurrentStep('intro');
         }
+        // Sempre abrir na página "Olá, Professor(a)!"
+        setCurrentStep('intro');
       } catch (e) {
         console.error('Erro ao carregar estado salvo:', e);
       }
