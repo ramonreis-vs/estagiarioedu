@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
-import { generatePlanning, sendChatMessage } from '../src/services/gemini.server.js';
+import { generatePlanning, sendChatMessage } from '../src/services/gemini.server.ts';
 
 const app = express();
 
